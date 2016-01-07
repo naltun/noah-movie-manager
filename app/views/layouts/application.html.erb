@@ -8,11 +8,23 @@
 </head>
 <body>
   
+  <%= render 'shared/navigation' %>
+  
   <div id="main-container" class="container">
     <div class="row">
       
+      <div class="row">
+        <div class="col-xs-12">
+          <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+          <% end -%>
+        </div>
+      </div>
+      
       <div class="col-xs-3">
-        <h3>Noah Movie Manager</h3>
+        <h3 style="color: lightblue;">Sites to Find Information</h3>
+        <p><%= link_to 'Wikipedia', "http://www.wikipedia.com", class: 'btn btn-default', target: '_blank' %></p>
+        <p><%= link_to 'IMDB', "http://www.imdb.com", class: 'btn btn-default', target: '_blank' %></p>
       </div>
       
       <div class="col-xs-9">
