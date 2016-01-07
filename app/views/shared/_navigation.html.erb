@@ -1,7 +1,14 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
+        
         <div class="navbar-header">
             <a class="navbar-brand" href="/">Noah Movie Manager</a>
         </div>
+        
+        <ul class="nav nav-tabs" role="tablist">
+          <li><%= link_to 'View List', movies_path %></li>
+          <li><%= link_to 'Add Movie', new_movie_path %></li>
+        </ul>
+
     </div>
 </nav>
